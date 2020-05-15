@@ -11,7 +11,7 @@ public class AvroGeneratorTest {
     public void test_avro_generator_using_user_sample() throws JsonMappingException {
 
         // Arrange
-        final var avrin = "{\n" +
+        final String avrin = "{\n" +
                 "   \"type\":\"record\",\n" +
                 "   \"name\":\"UserSample\",\n" +
                 "   \"namespace\":\"com.dassuncao.avro.generator\",\n" +
@@ -70,12 +70,12 @@ public class AvroGeneratorTest {
                 "   ]\n" +
                 "}";
 
-        final var avrinFormatted = avrin
+        final String avrinFormatted = avrin
                 .replace(System.lineSeparator(), "")
                 .replaceAll("\\s+", "");
 
         // Act
-        final var result = new AvroGenerator().generateAvroSchema();
+        final String result = new AvroGenerator().generateAvroSchema();
 
         // Assert
         assertEquals(result, avrinFormatted);
