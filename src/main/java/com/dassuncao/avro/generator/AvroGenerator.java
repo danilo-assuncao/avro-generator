@@ -8,8 +8,8 @@ import com.fasterxml.jackson.dataformat.avro.schema.AvroSchemaGenerator;
 public class AvroGenerator {
 
     public String generateAvroSchema() throws JsonMappingException {
-        final var mapper = new ObjectMapper(new AvroFactory());
-        final var visitor = new AvroSchemaGenerator();
+        final ObjectMapper mapper = new ObjectMapper(new AvroFactory());
+        final AvroSchemaGenerator visitor = new AvroSchemaGenerator();
         mapper.acceptJsonFormatVisitor(UserSample.class, visitor);
         return visitor.getGeneratedSchema().getAvroSchema().toString();
     }
