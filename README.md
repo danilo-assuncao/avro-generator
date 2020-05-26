@@ -1,4 +1,4 @@
-# Avro Generator Sample
+# Avro Generator
 Project for generating file in AVRO format using as a base java classes.
 
 ## Compatibility
