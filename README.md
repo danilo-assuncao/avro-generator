@@ -2,7 +2,7 @@
 Project for generating file in AVRO format using as a base java classes.
 
 ## Compatibility
-- Minimum Java 8
+- Java (>=8)
 
 ## Running the application
 1. Open the project from IntelliJ
